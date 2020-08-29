@@ -9,6 +9,9 @@ import { routes } from "./routes";
 import "./App.css";
 
 const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
   typography: {
     fontFamily: "'Montserrat', sans-serif",
   },

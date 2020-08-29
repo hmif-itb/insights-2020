@@ -1,8 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import "./style.css";
-
 interface MyProps {
   backgroundImage?: any;
   backgroundColor?: any;
@@ -16,7 +14,6 @@ interface MyProps {
 const useStyles = makeStyles({
   background: {
     backgroundImage: (props: MyProps) => props.backgroundImage,
-    backgroundColor: (props: MyProps) => props.backgroundColor,
     opacity: (props: MyProps) => props.backgroundOpacity,
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -27,21 +24,41 @@ const useStyles = makeStyles({
     left: 0,
     zIndex: 0,
   },
+  Slide: {
+    backgroundColor: (props: MyProps) => props.backgroundColor,
+    flex: 1,
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    height: '100%'
+  },
+  content: {
+    marginTop: "36px",
+    padding: "24px",
+    zIndex: 1,
+    flex: 1,
+    justifyContent: "start",
+  },
+  top_subtitle: { fontWeight: 600 },
+  main_text: { fontWeight: 900 },
+  body_text: { marginTop: "64px", lineHeight: "150%" },
+  list_items: { marginTop: "4px" },
+  list_item: { fontWeight: "bold", marginTop: "4px", marginBottom: "8px" },
 });
 
 const ThreeLineTopSlide: React.FC<MyProps> = (props) => {
   const classes = useStyles(props);
   return (
-    <div className="Slide">
+    <div className={classes.Slide}>
       <div className={classes.background}></div>
-      <div className="content">
+      <div className={classes.content}>
         <h3 className="top-subtitle">{props.topSubtitle}</h3>
         <h1 className="main-text">{props.mainText}</h1>
-        <p className="body-text">{props.bodyText}</p>
+        <p className={classes.body_text}>{props.bodyText}</p>
         {props.listItems && (
-          <div className="list-items">
+          <div className={classes.list_items}>
             {props.listItems.map((item) => (
-              <div className="list-item">{item}</div>
+              <div className={classes.list_item}>{item}</div>
             ))}
           </div>
         )}

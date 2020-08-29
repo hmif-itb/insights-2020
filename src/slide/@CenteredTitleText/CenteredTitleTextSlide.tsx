@@ -1,8 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import "./style.css";
-
 interface MyProps {
   backgroundImage?: any;
   backgroundColor?: any;
@@ -16,7 +14,6 @@ interface MyProps {
 const useStyles = makeStyles({
   background: {
     backgroundImage: (props: MyProps) => props.backgroundImage,
-    backgroundColor: (props: MyProps) => props.backgroundColor,
     opacity: (props: MyProps) => props.backgroundOpacity,
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -27,15 +24,32 @@ const useStyles = makeStyles({
     left: 0,
     zIndex: 0,
   },
+  Slide: {
+    backgroundColor: (props: MyProps) => props.backgroundColor,
+    flex: 1,
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+  },
+  content: {
+    padding: "24px",
+    zIndex: 1,
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
+  },
+  main_text: { margin: "0", textAlign: "center" },
 });
 
 const CenteredTitleTextSlide: React.FC<MyProps> = (props) => {
   const classes = useStyles(props);
   return (
-    <div className="Slide">
+    <div className={classes.Slide}>
       <div className={classes.background}></div>
-      <div className="content">
-        <h1 className="main-text">{props.mainText}</h1>
+      <div className={classes.content}>
+        <h1 className={classes.main_text}>{props.mainText}</h1>
       </div>
     </div>
   );
