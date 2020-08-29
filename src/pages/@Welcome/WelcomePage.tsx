@@ -12,10 +12,10 @@ const WelcomePage: React.FC = () => {
     <div className="WelcomePage">
       <Box display="flex">
         <Box>
-          <img src={InsightsLogo} height="20" />
+          <img src={InsightsLogo} height="20" alt="Insights logo" />
         </Box>
         <Box flexGrow={1}>
-          <img src={HMIFLogo} height="20" style={{ float: "right" }} />
+          <img src={HMIFLogo} height="20" alt="HMIF logo" style={{ float: "right" }} />
         </Box>
       </Box>
       <div className="content">
