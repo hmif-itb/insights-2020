@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import SwipeableViews from "react-swipeable-views";
+import Snackbar from '@material-ui/core/Snackbar';
 
 import ThreeLineTopSlide from "../../slide/@ThreeLineTop/ThreeLineTopSlide";
 import "./style.css";
@@ -9,11 +10,29 @@ import TestIITMoney from "../../assets/img/test/money.jpg";
 import TestLutek from "../../assets/img/test/lutekbg.png";
 import CenteredTitleTextSlide from "../../slide/@CenteredTitleText/CenteredTitleTextSlide";
 import PersonQuotesSlide from "../../slide/@PersonQuotes/PersonQuotesSlide";
+import ClosingSlide from "../../slide/@Closing/ClosingSlide";
 
 const InsightsPage: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showInstruction, setShowInstruction] = useState(true);
+
+  const changeIndex = (index: number) => {
+      setCurrentIndex(index);
+      setShowInstruction(false);
+  }
+
   return (
     <div className="InsightsPage">
+      <Snackbar
+        anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+        autoHideDuration={6000}
+        open={showInstruction}
+        onClose={() => setShowInstruction(false)}
+        message="Geser kiri untuk melanjutkan"
+      />
       <SwipeableViews
+        index={currentIndex}
+        onChangeIndex={changeIndex}
         style={{ height: "100%" }}
         containerStyle={{ height: "100%" }}
       >
@@ -90,7 +109,8 @@ const InsightsPage: React.FC = () => {
           backgroundColor="#008C98"
           mainText={
             <>
-              Wow! Kamu telah menyumbangkan tenaga kamu ke  <span className="text-yellow">5 tim</span>.
+              Wow! Kamu telah menyumbangkan tenaga kamu ke{" "}
+              <span className="text-yellow">5 tim</span>.
             </>
           }
           bodyText="Selama di HMIF, kamu tergabung ke dalam kepanitiaan/organisasi ini:"
@@ -99,7 +119,7 @@ const InsightsPage: React.FC = () => {
             "Divisi IT Arkavidia 6.0",
             "Departemen Technology",
             "Divisi Syukuran Wisuda April 2019",
-            "Panitia Dies Natalis HMIF 2019"
+            "Panitia Dies Natalis HMIF 2019",
           ]}
         />
         <CenteredTitleTextSlide
@@ -119,7 +139,7 @@ const InsightsPage: React.FC = () => {
           ctaTitle="Lihat Rapor Anggota"
           ctaLink="https://hmif.itb.ac.id"
         />
-      <PersonQuotesSlide
+        <PersonQuotesSlide
           quote="Lorem ipsum dolor sit amet! Lorem ipsum ipsum lorem."
           person={
             <>
@@ -147,6 +167,7 @@ const InsightsPage: React.FC = () => {
           backgroundOpacity={0.15}
           backgroundImage={`url('${TestLutek}')`}
         />
+        <ClosingSlide onRepeatClick={() => setCurrentIndex(0)} />
       </SwipeableViews>
     </div>
   );

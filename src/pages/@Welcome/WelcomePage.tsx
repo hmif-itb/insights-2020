@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
+import { Link as RouterLink } from'react-router-dom';
 
 import "./style.css";
 import InsightsLogo from "../../assets/img/InsightsLogo.svg";
@@ -26,7 +27,7 @@ const WelcomePage: React.FC = () => {
           Ingat apa saja yang telah kita lakukan bersama?
         </div>
       </div>
-      <Button variant="contained" size="large" color="primary">
+      <Button variant="contained" size="large" color="primary" component={RouterLink} to="/insights">
         Login ke Akun STD
       </Button>
     </div>
