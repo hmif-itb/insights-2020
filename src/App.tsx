@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import {
   createMuiTheme,
-  makeStyles,
   ThemeProvider,
 } from "@material-ui/core/styles";
 
