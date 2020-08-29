@@ -1,0 +1,23 @@
+.WelcomePage {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.large-title {
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 32px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
