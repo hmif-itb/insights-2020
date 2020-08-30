@@ -52,9 +52,9 @@ const ThreeLineTopSlide: React.FC<MyProps> = (props) => {
     <div className={classes.Slide}>
       <div className={classes.background}></div>
       <div className={classes.content}>
-        <h3 className="top-subtitle">{props.topSubtitle}</h3>
-        <h1 className="main-text">{props.mainText}</h1>
-        <p className={classes.body_text}>{props.bodyText}</p>
+        <h3 className="top-subtitle" dangerouslySetInnerHTML={{__html: props.topSubtitle}}></h3>
+        <h1 className="main-text" dangerouslySetInnerHTML={{__html: props.mainText}}></h1>
+        <p className={classes.body_text} dangerouslySetInnerHTML={{__html: props.bodyText}}></p>
         {props.listItems && (
           <div className={classes.list_items}>
             {props.listItems.map((item) => (

@@ -58,8 +58,8 @@ const PersonQuotesSlide: React.FC<MyProps> = (props) => {
       <div className={classes.background}></div>
       <div className={classes.content}>
         <FormatQuoteIcon className={classes.icon_quote} fontSize="large" />
-        <h1 className={classes.main_text}>{props.quote}</h1>
-        <p className={classes.body_text}>{props.person}</p>
+        <h1 className={classes.main_text} dangerouslySetInnerHTML={{__html: props.quote}}></h1>
+        <p className={classes.body_text} dangerouslySetInnerHTML={{__html: props.person}}></p>
       </div>
       {props.ctaTitle && (
         <div className={classes.cta}>

@@ -1,0 +1,120 @@
+[
+    {
+        "type": "threeLine",
+        "params": {
+            "topSubtitle": "Hi, Didit!",
+            "mainText": "Kamu bergabung dengan HMIF pada tahun <span class='text-yellow'>2018</span>",
+            "bodyText": "Setelah tiga bulan menghadapi teriakan Tio dan Ambar, akhirnya kamu dilantik menjadi angkatan <b>UNIX 2017</b>.",
+            "backgroundImage": "/img/unix.jpg",
+            "backgroundOpacity": 0.15
+        }
+    },
+    {
+        "type": "threeLine",
+        "params": {
+            "topSubtitle": "#HMIFFightsCorona",
+            "mainText": "Virus <span class='text-yellow'>corona</span> bukan halangan.",
+            "bodyText": "Kita sudah Berhimpun From Home selama <b>92 hari</b> lho! Walaupun begitu, kita sudah melakukan <b>17 kegiatan</b> bersama-sama. Selain itu, kita juga sudah menyumbang <b>Rp5.432.000,-</b> untuk penanggulangan pandemi!",
+            "backgroundColor": "#2E0055",
+            "backgroundOpacity": 0.15,
+            "backgroundImage": "/img/covid.png"
+        }
+    },
+    {
+        "type": "threeLine",
+        "params": {
+            "topSubtitle": "#CuanProyekanIIT",
+            "mainText": "Kamu sudah menyelesaikan <span class='text-yellow'>3 proyek</span> bersama IIT lho!",
+            "bodyText": "Di kepengurusan ini, kamu sudah menyelesaikan <b>3 proyek</b>, dan dibayar <b>Rp5.630.000</b>! Bisa banget tuh buat traktiran :)",
+            "backgroundColor": "#502E00",
+            "backgroundOpacity": 0.15,
+            "backgroundImage": "/img/money.jpg"
+        }
+    },
+    {
+        "type": "threeLine",
+        "params": {
+            "backgroundColor": "#460098",
+            "mainText": "Selama di HMIF, kamu sudah memimpin <span class='text-yellow'>3 divisi</span>, lho!",
+            "bodyText": "Terima kasih atas jasa kamu memimpin divisi-divisi ini:",
+            "listItems": [
+                "Divisi Tech Career and Issues",
+                "Divisi IT Arkavidia 6.0",
+                "Departemen Technology"
+            ]
+        }
+    },
+    {
+        "type": "threeLine",
+        "params": {
+            "backgroundColor": "#008C98",
+            "mainText": "Wow! Kamu telah menyumbangkan tenaga kamu ke <span class='text-yellow'>5 tim</span>.",
+            "bodyText": "Selama di HMIF, kamu tergabung ke dalam kepanitiaan/organisasi ini:",
+            "listItems": [
+                "Divisi Tech Career and Issues",
+                "Divisi IT Arkavidia 6.0",
+                "Divisi Syukuran Wisuda April 2019",
+                "Panitia Dies Natalis HMIF 2019",
+                "Departemen Technology"
+            ]
+        }
+    },
+    {
+        "type": "centeredTitleText",
+        "params": {
+            "mainText": "Berikut adalah pesan dari kadiv-kadiv kamu.",
+            "backgroundColor": "#008C98"
+        }
+    },
+    {
+        "type": "personQuotes",
+        "params": {
+            "quote": "Lorem ipsum dolor sit amet! Lorem ipsum ipsum lorem.",
+            "person": "Luthfi Eko Trinowo,<br />Ketua HMIF Periode 2020/2021",
+            "backgroundColor": "#008C98",
+            "ctaTitle": "Lihat Rapor Anggota",
+            "ctaLink": "https://hmif.itb.ac.id"
+        }
+    },
+    {
+        "type": "personQuotes",
+        "params": {
+            "quote": "Lorem ipsum dolor sit amet! Lorem ipsum ipsum lorem.",
+            "person": "Nella Zabrina Primata,<br />Ketua Divisi IT Arkavidia 6.0",
+            "backgroundColor": "#008C98",
+            "ctaTitle": "Lihat Rapor Anggota",
+            "ctaLink": "https://hmif.itb.ac.id"
+        }
+    },
+    {
+        "type": "threeLine",
+        "params": {
+            "topSubtitle": "#KangenKamu",
+            "mainText": "Kami meminta kalian menuliskan kesan &amp; pesan untuk teman-teman kalian.",
+            "bodyText": "Sekarang, lihat apa yang teman-teman kamu tulis buat kamu.",
+            "backgroundColor": "#580014",
+            "backgroundOpacity": 0.15,
+            "backgroundImage": "/img/kangenkamu.png"
+        }
+    },
+    {
+        "type": "personQuotes",
+        "params": {
+            "quote": "Yak gua serahin kepada lu",
+            "person": "Luthfi Eko Trinowo, UNIX 2017",
+            "backgroundColor": "#580014",
+            "backgroundImage": "https://insights-static.hmif.tech/person/18217018.jpg",
+            "backgroundOpacity": 0.15
+        }
+    },
+    {
+        "type": "personQuotes",
+        "params": {
+            "quote": "Hello person! Lorem ipsum dolor sit amet.",
+            "person": "Seseorang di UNIX 2017",
+            "backgroundColor": "#580014",
+            "backgroundImage": "/img/anonym.png",
+            "backgroundOpacity": 0.15
+        }
+    }
+]

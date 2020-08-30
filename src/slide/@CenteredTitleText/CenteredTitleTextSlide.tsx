@@ -49,7 +49,7 @@ const CenteredTitleTextSlide: React.FC<MyProps> = (props) => {
     <div className={classes.Slide}>
       <div className={classes.background}></div>
       <div className={classes.content}>
-        <h1 className={classes.main_text}>{props.mainText}</h1>
+        <h1 className={classes.main_text} dangerouslySetInnerHTML={{__html: props.mainText}}></h1>
       </div>
     </div>
   );
