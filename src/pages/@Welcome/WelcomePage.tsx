@@ -1,7 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import Box from "@material-ui/core/Box";
-import axios from "axios";
 import GoogleLogin from "react-google-login";
 
 import "./style.css";
@@ -9,23 +7,12 @@ import InsightsLogo from "../../assets/img/InsightsLogo.svg";
 import HMIFLogo from "../../assets/img/hmiflogo.png";
 
 const WelcomePage: React.FC = () => {
-  const history = useHistory();
+  const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID || '';
+  const googleHostedDomain = process.env.REACT_APP_GSUITE_DOMAIN;
 
-  const googleClientId =
-    process.env.GOOGLE_CLIENT_ID ||
-    "41966004050-oh29iv7osdsmg8c9inn4q1kgagd0ga9k.apps.googleusercontent.com";
-  const googleHostedDomain = process.env.GSUITE_DOMAIN || "std.stei.itb.ac.id";
-
-  const fetchHmac = (idToken: string) => {
-    axios.post("/.netlify/functions/macredirect", { idToken }).then((res) => {
-      const { uid } = res.data;
-      history.push('/insights/' + uid);
-    });
-  };
-
-  const responseGoogle = (response: any) => {
-    fetchHmac(response.tokenId);
-  };
+  const location = window.location;
+  const baseUrl = location.protocol + "//" + location.host;
+  const redirectUrl = baseUrl + '/login'
 
   return (
     <div className="root">
@@ -57,9 +44,8 @@ const WelcomePage: React.FC = () => {
             clientId={googleClientId}
             hostedDomain={googleHostedDomain}
             buttonText="Login to std.stei.itb.ac.id"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
-            cookiePolicy={"single_host_origin"}
+            uxMode="redirect"
+            redirectUri={redirectUrl}
           />
         </div>
       </div>
