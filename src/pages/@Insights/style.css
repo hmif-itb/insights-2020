@@ -32,6 +32,15 @@
     justify-content: center;
 }
 
+.error-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 24px;
+}
+
 .page-indicator-container {
   position: absolute;
   width: 100%;

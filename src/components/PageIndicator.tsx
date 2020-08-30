@@ -42,7 +42,7 @@ const PageIndicator: React.FC<MyProps> = ({ total, index }) => {
         .map((_, i) => {
           const className =
             index === i ? "active" : i < index ? "passed" : "next";
-          return <div className={`${classes.item} ${className}`} />;
+          return <div className={`${classes.item} ${className}`} key={i} />;
         })}
     </div>
   );

@@ -4,5 +4,5 @@ import InsightsPage from './pages/@Insights/InsightsPage';
 
 export const routes: {[path: string]: React.ReactElement} = {
     '/': <WelcomePage />,
-    '/insights': <InsightsPage />
+    '/insights/:uid': <InsightsPage />
 }

@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 import SwipeableViews from "react-swipeable-views";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -13,9 +16,11 @@ import PageIndicator from "../../components/PageIndicator";
 import { CircularProgress } from "@material-ui/core";
 
 const InsightsPage: React.FC = () => {
+  const params = useParams<{ uid: string }>();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showInstruction, setShowInstruction] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string>();
   const [slides, setSlides] = useState<Slide[]>([]);
 
   const changeIndex = (index: number) => {
@@ -24,15 +29,20 @@ const InsightsPage: React.FC = () => {
   };
 
   const fetchSlidesJson = () => {
+    const fetchBaseUrl = process.env.REACT_APP_STORIES_BASE_URL;
     setLoading(true);
     axios
-      .get("/test_data.json")
+      .get(`${fetchBaseUrl}/${params.uid}.json`)
       .then((res) => {
         setShowInstruction(true);
         setSlides(res.data);
       })
       .catch((e) => {
-        console.log(e);
+        if (e.response.status === 404) {
+          setError("Kami gak punya Insights untukmu :(");
+        } else {
+          setError("Hmm terjadi kesalahan yang gak diduga");
+        }
       })
       .finally(() => {
         setLoading(false);
@@ -69,7 +79,19 @@ const InsightsPage: React.FC = () => {
               <CircularProgress />
             </div>
           )}
-          {!loading && (
+          {!loading && error && (
+            <div className="error-page">
+              <h2>{error}</h2>
+              <Button
+                variant="outlined"
+                component={RouterLink}
+                to="/"
+              >
+                Kembali ke Laman Utama
+              </Button>
+            </div>
+          )}
+          {!loading && !error && (
             <>
               <div className="page-indicator-container">
                 <PageIndicator total={slides.length + 1} index={currentIndex} />

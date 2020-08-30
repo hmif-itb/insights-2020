@@ -20,7 +20,7 @@ function App() {
       <Router>
         {Object.keys(routes).map((route) => {
           return (
-            <Route path={route} exact>
+            <Route path={route} exact key={route}>
               {routes[route]}
             </Route>
           );

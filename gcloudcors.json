@@ -1,0 +1,8 @@
+[
+    {
+      "origin": ["http://localhost:3000", "https://insights.hmif.tech"],
+      "method": ["GET", "POST", "PUT", "OPTIONS"],
+      "responseHeader": ["*"],
+      "maxAgeSeconds": 86400
+    }
+]
