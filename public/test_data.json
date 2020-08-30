@@ -73,6 +73,8 @@
         "params": {
             "quote": "Lorem ipsum dolor sit amet! Lorem ipsum ipsum lorem.",
             "person": "Luthfi Eko Trinowo,<br />Ketua HMIF Periode 2020/2021",
+            "backgroundImage": "https://storage.googleapis.com/hmif-insights/portraits/17/18217018.jpg",
+            "backgroundOpacity": 0.15,
             "backgroundColor": "#008C98",
             "ctaTitle": "Lihat Rapor Anggota",
             "ctaLink": "https://hmif.itb.ac.id"
@@ -95,7 +97,7 @@
             "mainText": "Kami meminta kalian menuliskan kesan &amp; pesan untuk teman-teman kalian.",
             "bodyText": "Sekarang, lihat apa yang teman-teman kamu tulis buat kamu.",
             "backgroundColor": "#580014",
-            "backgroundOpacity": 0.15,
+            "backgroundOpacity": 0.2,
             "backgroundImage": "/img/kangen-kamu.jpg"
         }
     },
@@ -105,7 +107,7 @@
             "quote": "Yak gua serahin kepada lu",
             "person": "Luthfi Eko Trinowo, UNIX 2017",
             "backgroundColor": "#580014",
-            "backgroundImage": "https://insights-static.hmif.tech/person/18217018.jpg",
+            "backgroundImage": "https://storage.googleapis.com/hmif-insights/portraits/17/18217018.jpg",
             "backgroundOpacity": 0.15
         }
     },
