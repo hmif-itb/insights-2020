@@ -91,7 +91,7 @@
     {
         "type": "personQuotes",
         "params": {
-            "quote": "Lorem ipsum dolor sit amet! Lorem ipsum ipsum lorem.",
+            "quote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. hah lol.",
             "person": "Luthfi Eko Trinowo,<br />Ketua HMIF 2020/2021",
             "backgroundColor": "#008C98",
             "backgroundOpacity": 0.15,
@@ -125,7 +125,7 @@
         "type": "personQuotes",
         "params": {
             "quote": "Yak gua serahin kepada lu",
-            "person": "Luthfi Eko Trinowo, UNIX 2017",
+            "person": "Luthfi Eko Trinowo, UNIX 2017<br /><small style='opacity: 0.5'>Untuk Didit, Ridwan, Iwang, dan Fitria</small>",
             "backgroundColor": "#580014",
             "backgroundImage": "https://storage.googleapis.com/hmif-insights/portraits/17/18217018.jpg",
             "backgroundOpacity": 0.15

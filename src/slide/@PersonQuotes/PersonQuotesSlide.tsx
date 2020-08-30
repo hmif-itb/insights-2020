@@ -32,7 +32,8 @@ const useStyles = makeStyles({
     position: "relative",
     display: "flex",
     flexDirection: "column",
-    height: '100%'
+    height: "100%",
+    overflow: "auto",
   },
   content: {
     marginTop: "48px",
@@ -41,7 +42,15 @@ const useStyles = makeStyles({
     flex: 1,
     justifyContent: "start",
   },
-  main_text: { margin: "0" },
+  main_text: {
+    margin: "0",
+    fontSize: (props: MyProps) =>
+      props.quote.length > 200
+        ? "14pt"
+        : props.quote.length > 100
+        ? "18pt"
+        : undefined,
+  },
   icon_quote: {
     marginLeft: "-6px",
     transform: "rotate(180deg)",
@@ -58,8 +67,14 @@ const PersonQuotesSlide: React.FC<MyProps> = (props) => {
       <div className={classes.background}></div>
       <div className={classes.content}>
         <FormatQuoteIcon className={classes.icon_quote} fontSize="large" />
-        <h1 className={classes.main_text} dangerouslySetInnerHTML={{__html: props.quote}}></h1>
-        <p className={classes.body_text} dangerouslySetInnerHTML={{__html: props.person}}></p>
+        <h1
+          className={classes.main_text}
+          dangerouslySetInnerHTML={{ __html: props.quote }}
+        ></h1>
+        <p
+          className={classes.body_text}
+          dangerouslySetInnerHTML={{ __html: props.person }}
+        ></p>
       </div>
       {props.ctaTitle && (
         <div className={classes.cta}>
