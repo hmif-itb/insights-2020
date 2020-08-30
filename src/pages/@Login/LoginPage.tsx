@@ -10,7 +10,7 @@ const LoginPage: React.FC = () => {
   const fetchHmac = (idToken: string) => {
     axios.post("/.netlify/functions/macredirect", { idToken }).then((res) => {
       const { uid } = res.data;
-      history.push("/insights/" + uid);
+      history.replace("/insights/" + uid);
     });
   };
 
