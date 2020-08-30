@@ -56,7 +56,9 @@
                 "Divisi Syukuran Wisuda April 2019",
                 "Panitia Dies Natalis HMIF 2019",
                 "Departemen Technology"
-            ]
+            ],
+            "backgroundImage": "/img/orgpart.jpg",
+            "backgroundOpacity": 0.15
         }
     },
     {
@@ -94,7 +96,7 @@
             "bodyText": "Sekarang, lihat apa yang teman-teman kamu tulis buat kamu.",
             "backgroundColor": "#580014",
             "backgroundOpacity": 0.15,
-            "backgroundImage": "/img/kangenkamu.png"
+            "backgroundImage": "/img/kangen-kamu.jpg"
         }
     },
     {

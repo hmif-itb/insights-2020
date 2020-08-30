@@ -54,6 +54,8 @@ registerSlideType("personQuotes", (params) => {
     backgroundOpacity,
     quote,
     person,
+    ctaTitle,
+    ctaLink
   } = params;
   return (
     <PersonQuotesSlide
@@ -64,6 +66,8 @@ registerSlideType("personQuotes", (params) => {
       backgroundOpacity={backgroundOpacity}
       quote={quote}
       person={person}
+      ctaTitle={ctaTitle}
+      ctaLink={ctaLink}
     />
   );
 });
