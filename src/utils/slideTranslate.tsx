@@ -1,5 +1,5 @@
 import React from "react";
-import ThreeLineTopSlide from "../slide/@ThreeLineTop/ThreeLineTopSlide";
+import ThreeLineSlide from "../slide/@ThreeLine/ThreeLineSlide";
 import PersonQuotesSlide from "../slide/@PersonQuotes/PersonQuotesSlide";
 import CenteredTitleTextSlide from "../slide/@CenteredTitleText/CenteredTitleTextSlide";
 
@@ -30,10 +30,11 @@ registerSlideType("threeLine", (params) => {
     mainText,
     bodyText,
     listItems,
+    bottom,
   } = params;
 
   return (
-    <ThreeLineTopSlide
+    <ThreeLineSlide
       backgroundImage={
         backgroundImage ? `url('${backgroundImage}')` : undefined
       }
@@ -43,6 +44,7 @@ registerSlideType("threeLine", (params) => {
       mainText={mainText}
       bodyText={bodyText}
       listItems={listItems}
+      bottom={bottom}
     />
   );
 });
@@ -55,7 +57,7 @@ registerSlideType("personQuotes", (params) => {
     quote,
     person,
     ctaTitle,
-    ctaLink
+    ctaLink,
   } = params;
   return (
     <PersonQuotesSlide
@@ -90,3 +92,28 @@ registerSlideType("centeredTitleText", (params) => {
     />
   );
 });
+
+/** Special panels */
+registerSlideType("covid19", (params) => {
+  const dateSinceBFH = dateDiff(new Date(2020, 3, 16), new Date())
+  const noOfActivities = 17;
+  const amountDonated = "Rp13.446.543,-";
+  const bodyText = `Kita sudah Berhimpun From Home selama <b>${dateSinceBFH} hari</b> lho! Walaupun begitu, kita sudah melakukan <b>${noOfActivities} kegiatan</b> bersama-sama. Selain itu, kita juga sudah menyumbang <b>${amountDonated}</b> untuk penanggulangan pandemi!`;
+  return (
+    <ThreeLineSlide
+      backgroundImage={`url('/img/covid.png')`}
+      backgroundColor="#2E0055"
+      backgroundOpacity={0.15}
+      topSubtitle="#HMIFFightsCorona"
+      mainText="Virus <span class='text-yellow'>corona</span> bukan halangan."
+      bodyText={bodyText}
+    />
+  );
+});
+
+function dateDiff(startDate: Date, endDate: Date) {
+  const oneDay = 24 * 60 * 60 * 1000;
+  return Math.round(
+    Math.abs((startDate.getTime() - endDate.getTime()) / oneDay)
+  );
+}

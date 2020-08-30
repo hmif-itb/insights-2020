@@ -3,7 +3,7 @@
         "type": "threeLine",
         "params": {
             "topSubtitle": "Hi, Didit!",
-            "mainText": "Kamu bergabung dengan HMIF pada tahun <span class='text-yellow'>2018</span>",
+            "mainText": "Kamu bergabung dengan HMIF pada tahun <span class='text-yellow'>2018</span>.",
             "bodyText": "Setelah tiga bulan menghadapi teriakan Tio dan Ambar, akhirnya kamu dilantik menjadi angkatan <b>UNIX 2017</b>.",
             "backgroundImage": "/img/unix.jpg",
             "backgroundOpacity": 0.15
@@ -29,6 +29,14 @@
             "backgroundColor": "#502E00",
             "backgroundOpacity": 0.15,
             "backgroundImage": "/img/money.jpg"
+        }
+    },
+    {
+        "type": "threeLine",
+        "params": {
+            "mainText": "Terima kasih udah ngebawain sleeping bag pas SPARTA 2017.",
+            "bodyText": "Kamu membawa sleeping bag seangkatan sampe-sampe dimarahin sama Cita. Maafin Cita ya :)",
+            "bottom": true
         }
     },
     {
@@ -72,10 +80,10 @@
         "type": "personQuotes",
         "params": {
             "quote": "Lorem ipsum dolor sit amet! Lorem ipsum ipsum lorem.",
-            "person": "Luthfi Eko Trinowo,<br />Ketua HMIF Periode 2020/2021",
-            "backgroundImage": "https://storage.googleapis.com/hmif-insights/portraits/17/18217018.jpg",
-            "backgroundOpacity": 0.15,
+            "person": "Mohammad Ridwan Hady Arifin,<br />Penanggung Jawab Acara Dies Natalis 2019",
             "backgroundColor": "#008C98",
+            "backgroundOpacity": 0.15,
+            "backgroundImage": "https://storage.googleapis.com/hmif-insights/portraits/17/13517007.jpg",
             "ctaTitle": "Lihat Rapor Anggota",
             "ctaLink": "https://hmif.itb.ac.id"
         }
@@ -84,10 +92,22 @@
         "type": "personQuotes",
         "params": {
             "quote": "Lorem ipsum dolor sit amet! Lorem ipsum ipsum lorem.",
-            "person": "Nella Zabrina Primata,<br />Ketua Divisi IT Arkavidia 6.0",
+            "person": "Luthfi Eko Trinowo,<br />Ketua HMIF 2020/2021",
             "backgroundColor": "#008C98",
+            "backgroundOpacity": 0.15,
+            "backgroundImage": "https://storage.googleapis.com/hmif-insights/portraits/17/18217018.jpg",
             "ctaTitle": "Lihat Rapor Anggota",
             "ctaLink": "https://hmif.itb.ac.id"
+        }
+    },
+    {
+        "type": "threeLine",
+        "params": {
+            "topSubtitle": "#MaininKamu",
+            "mainText": "Wow kamu udah main bareng kita <span class='text-yellow'>3 kali</span>.",
+            "bodyText": "<b>...dan menang 1 kali, keren!</b><br />Irena, Tape, dan Juro seneng banget!",
+            "backgroundColor": "#C70054",
+            "bottom": true
         }
     },
     {

@@ -9,6 +9,7 @@ interface MyProps {
   mainText?: any;
   bodyText?: any;
   listItems?: any[];
+  bottom?: boolean;
 }
 
 const useStyles = makeStyles({
@@ -30,7 +31,7 @@ const useStyles = makeStyles({
     position: "relative",
     display: "flex",
     flexDirection: "column",
-    height: '100%'
+    height: "100%",
   },
   content: {
     marginTop: "36px",
@@ -46,19 +47,29 @@ const useStyles = makeStyles({
   list_item: { fontWeight: "bold", marginTop: "4px", marginBottom: "8px" },
 });
 
-const ThreeLineTopSlide: React.FC<MyProps> = (props) => {
+const ThreeLineSlide: React.FC<MyProps> = (props) => {
   const classes = useStyles(props);
   return (
     <div className={classes.Slide}>
       <div className={classes.background}></div>
+      {!!props.bottom && <div style={{ flex: 1 }}></div>}
       <div className={classes.content}>
-        <h3 className="top-subtitle" dangerouslySetInnerHTML={{__html: props.topSubtitle}}></h3>
-        <h1 className="main-text" dangerouslySetInnerHTML={{__html: props.mainText}}></h1>
-        <p className={classes.body_text} dangerouslySetInnerHTML={{__html: props.bodyText}}></p>
+        <h3
+          className="top-subtitle"
+          dangerouslySetInnerHTML={{ __html: props.topSubtitle }}
+        ></h3>
+        <h1
+          className="main-text"
+          dangerouslySetInnerHTML={{ __html: props.mainText }}
+        ></h1>
+        <p
+          className={classes.body_text}
+          dangerouslySetInnerHTML={{ __html: props.bodyText }}
+        ></p>
         {props.listItems && (
           <div className={classes.list_items}>
-            {props.listItems.map((item) => (
-              <div className={classes.list_item}>{item}</div>
+            {props.listItems.map((item, i) => (
+              <div className={classes.list_item} key={i}>{item}</div>
             ))}
           </div>
         )}
@@ -67,4 +78,4 @@ const ThreeLineTopSlide: React.FC<MyProps> = (props) => {
   );
 };
 
-export default ThreeLineTopSlide;
+export default ThreeLineSlide;
