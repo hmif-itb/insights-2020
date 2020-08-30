@@ -51,6 +51,7 @@ const InsightsPage: React.FC = () => {
 
   useEffect(() => {
     fetchSlidesJson();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -82,11 +83,7 @@ const InsightsPage: React.FC = () => {
           {!loading && error && (
             <div className="error-page">
               <h2>{error}</h2>
-              <Button
-                variant="outlined"
-                component={RouterLink}
-                to="/"
-              >
+              <Button variant="outlined" component={RouterLink} to="/">
                 Kembali ke Laman Utama
               </Button>
             </div>
