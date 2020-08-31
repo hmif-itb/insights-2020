@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   justify-content: center;
+  align-items: center;
 }
 
 .main {
