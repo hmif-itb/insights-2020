@@ -25,8 +25,7 @@ exports.handler = async function (event, context) {
     const eventItem = { target, sessionId, type, time, data };
 
     try {
-        const response = await client.query(q.Create(q.Ref("classes/insights_events"), { data: eventItem }));
-        console.log("success", response)
+        await client.query(q.Create(q.Ref("classes/insights_events"), { data: eventItem }));
         return {
             statusCode: 200,
             body: JSON.stringify({ success: true })
