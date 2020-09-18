@@ -78,6 +78,7 @@ const InsightsPage: React.FC = () => {
     const id = slide.id || "idx:" + currentIndex;
 
     recordEvent("slide", { id });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   return (
