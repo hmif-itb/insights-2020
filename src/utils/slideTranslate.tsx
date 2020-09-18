@@ -5,6 +5,7 @@ import CenteredTitleTextSlide from "../slide/@CenteredTitleText/CenteredTitleTex
 
 type BuilderFunction = { (params: { [key: string]: any }): React.ReactElement };
 export interface Slide {
+  id?: string;
   type: "threeLine" | "personQuotes" | "centeredTitleText";
   params: { [key: string]: any };
 }

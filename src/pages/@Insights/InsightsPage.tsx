@@ -8,6 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import ArrowLeftIcon from "@material-ui/icons/ChevronLeft";
 import ArrowRightIcon from "@material-ui/icons/ChevronRight";
 import axios from "axios";
+import { uuid } from "uuidv4";
 
 import "./style.css";
 import ClosingSlide from "../../slide/@Closing/ClosingSlide";
@@ -17,6 +18,7 @@ import { CircularProgress } from "@material-ui/core";
 
 const InsightsPage: React.FC = () => {
   const params = useParams<{ uid: string }>();
+  const [sessionId] = useState<string>(uuid());
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showInstruction, setShowInstruction] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -49,10 +51,34 @@ const InsightsPage: React.FC = () => {
       });
   };
 
+  const recordEvent = (type: string, data?: { [key: string]: any }) => {
+    const body = {
+      target: params.uid,
+      sessionId,
+      type,
+      time: Math.round(new Date().getTime() / 1000),
+      data,
+    };
+
+    axios.post("/.netlify/functions/event", body).catch((e) => {
+      console.log("Event recording failed", e);
+    });
+  };
+
   useEffect(() => {
     fetchSlidesJson();
+    recordEvent("init");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (!slides) return;
+
+    const slide = slides[currentIndex];
+    const id = slide.id || "idx:" + currentIndex;
+
+    recordEvent("slide", { id });
+  }, [currentIndex]);
 
   return (
     <div className="root">
