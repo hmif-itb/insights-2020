@@ -72,9 +72,9 @@ const InsightsPage: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (!slides) return;
-
     const slide = slides[currentIndex];
+    if (!slide) return;
+    
     const id = slide.id || "idx:" + currentIndex;
 
     recordEvent("slide", { id });
