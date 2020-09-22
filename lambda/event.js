@@ -12,9 +12,13 @@ exports.handler = async function (event, context) {
         return { statusCode: 405, body: "Method Not Allowed" };
     }
 
-    const { target, sessionId, type, time, data } = JSON.parse(event.body);
+    const { target, sessionId, events } = JSON.parse(event.body);
 
-    if (!target || !sessionId || !type || !time) {
+    if (!target || !sessionId || !events) {
+        return { statusCode: 400, body: "Incomplete parameters" };
+    }
+
+    if (!events.every(e => !!e.time && !!e.type)) {
         return { statusCode: 400, body: "Incomplete parameters" };
     }
 
@@ -22,7 +26,7 @@ exports.handler = async function (event, context) {
         return { statusCode: 404, body: "Invalid target" };
     }
 
-    const eventItem = { target, sessionId, type, time, data };
+    const eventItem = { target, sessionId, events };
 
     try {
         await client.query(q.Create(q.Ref("classes/insights_events"), { data: eventItem }));

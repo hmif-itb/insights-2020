@@ -16,6 +16,12 @@ import { Slide, translateSlide } from "../../utils/slideTranslate";
 import PageIndicator from "../../components/PageIndicator";
 import { CircularProgress } from "@material-ui/core";
 
+interface InsightsEvent {
+  type: string;
+  time: number;
+  [key: string]: any;
+}
+
 const InsightsPage: React.FC = () => {
   const params = useParams<{ uid: string }>();
   const [sessionId] = useState<string>(uuid());
@@ -24,6 +30,7 @@ const InsightsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>();
   const [slides, setSlides] = useState<Slide[]>([]);
+  const [events, setEvents] = useState<InsightsEvent[]>([]);
 
   const changeIndex = (index: number) => {
     setCurrentIndex(index);
@@ -52,17 +59,25 @@ const InsightsPage: React.FC = () => {
   };
 
   const recordEvent = (type: string, data?: { [key: string]: any }) => {
+    const event = { type, data, time: Math.round(new Date().getTime() / 1000) };
+    setEvents([...events, event]);
+  };
+
+  const reportEvent = () => {
     const body = {
       target: params.uid,
       sessionId,
-      type,
-      time: Math.round(new Date().getTime() / 1000),
-      data,
+      events,
     };
 
-    axios.post("/.netlify/functions/event", body).catch((e) => {
-      console.log("Event recording failed", e);
-    });
+    axios
+      .post("/.netlify/functions/event", body)
+      .then(() => {
+        setEvents([]);
+      })
+      .catch((e) => {
+        console.log("Event recording failed", e);
+      });
   };
 
   useEffect(() => {
@@ -74,10 +89,16 @@ const InsightsPage: React.FC = () => {
   useEffect(() => {
     const slide = slides[currentIndex];
     if (!slide) return;
-    
-    const id = slide.id || "idx:" + currentIndex;
 
+    const id = slide.id || "idx:" + currentIndex;
     recordEvent("slide", { id });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex]);
+
+  useEffect(() => {
+    if (slides.length > 0 && events.length > 0 && currentIndex === slides.length) {
+      reportEvent();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
