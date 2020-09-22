@@ -31,6 +31,7 @@ const InsightsPage: React.FC = () => {
   const [error, setError] = useState<string>();
   const [slides, setSlides] = useState<Slide[]>([]);
   const [events, setEvents] = useState<InsightsEvent[]>([]);
+  const [rating, setRating] = useState<number>();
 
   const changeIndex = (index: number) => {
     setCurrentIndex(index);
@@ -58,6 +59,23 @@ const InsightsPage: React.FC = () => {
       });
   };
 
+  const fetchRating = () => {
+    axios.get("/.netlify/functions/rate?target=" + params.uid).then((res) => {
+      setRating(res.data.stars);
+    });
+  };
+
+  const updateRating = (rating: number) => {
+    axios
+      .post("/.netlify/functions/rate", {
+        target: params.uid,
+        stars: rating,
+      })
+      .catch((e) => {
+        console.log("Rating failed", e);
+      });
+  };
+
   const recordEvent = (type: string, data?: { [key: string]: any }) => {
     const event = { type, data, time: Math.round(new Date().getTime() / 1000) };
     setEvents([...events, event]);
@@ -82,6 +100,7 @@ const InsightsPage: React.FC = () => {
 
   useEffect(() => {
     fetchSlidesJson();
+    fetchRating();
     recordEvent("init");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -96,7 +115,11 @@ const InsightsPage: React.FC = () => {
   }, [currentIndex]);
 
   useEffect(() => {
-    if (slides.length > 0 && events.length > 0 && currentIndex === slides.length) {
+    if (
+      slides.length > 0 &&
+      events.length > 0 &&
+      currentIndex === slides.length
+    ) {
       reportEvent();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -148,7 +171,14 @@ const InsightsPage: React.FC = () => {
                 containerStyle={{ height: "100%" }}
               >
                 {slides.map((slide) => translateSlide(slide))}
-                <ClosingSlide onRepeatClick={() => setCurrentIndex(0)} />
+                <ClosingSlide
+                  onRepeatClick={() => setCurrentIndex(0)}
+                  rating={rating}
+                  onRated={(stars) => {
+                    updateRating(stars);
+                    setRating(stars);
+                  }}
+                />
               </SwipeableViews>
             </>
           )}

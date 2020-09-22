@@ -47,9 +47,15 @@ const StyledRating = withStyles({
 
 interface MyProps {
   onRepeatClick: { (): void };
+  onRated: { (stars: number): void };
+  rating?: number;
 }
 
-const ClosingSlide: React.FC<MyProps> = ({ onRepeatClick }) => {
+const ClosingSlide: React.FC<MyProps> = ({
+  rating,
+  onRated,
+  onRepeatClick,
+}) => {
   const classes = useStyles();
 
   return (
@@ -74,17 +80,28 @@ const ClosingSlide: React.FC<MyProps> = ({ onRepeatClick }) => {
         </h2>
         <div>
           <div className={classes.rating_container}>
-            <small>Seberapa suka kamu dengan HMIF Insights 2020?</small>
+            {!rating && (
+              <small>Seberapa suka kamu dengan HMIF Insights 2020?</small>
+            )}
+            {rating && rating > 3 && (
+              <small>Kami seneng banget kamu menyukainya!</small>
+            )}
+            {rating && rating <= 3 && (
+              <small>Makasih udah ngasih rating :)</small>
+            )}
             <div>
               <StyledRating
                 name="customized-color"
-                defaultValue={0}
+                value={rating || 0}
                 getLabelText={(value: number) =>
                   `${value} Heart${value !== 1 ? "s" : ""}`
                 }
                 precision={1}
                 icon={<FavoriteIcon fontSize="inherit" />}
                 size="large"
+                onChange={(event, newValue) => {
+                  if (newValue) onRated(newValue);
+                }}
               />
             </div>
           </div>
