@@ -74,9 +74,9 @@ const RaporAnggotaSlide: React.FC<MyProps> = (props) => {
     <div className={classes.slide}>
       <div className={classes.background}></div>
       <div className={classes.content}>
-        <div>Rapor Anggota #1</div>
+        <div>Rapor Anggota</div>
         <h1 className={classes.slideTitle}>
-          <b>Arkavidia 6.0</b>
+          <b>{props.org}</b>
         </h1>
         <Box mt={3}>
           <div className={classes.sectionTitle}>Posisi</div>
