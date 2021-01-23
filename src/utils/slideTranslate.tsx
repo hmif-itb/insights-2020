@@ -2,6 +2,7 @@ import React from "react";
 import ThreeLineSlide from "../slide/@ThreeLine/ThreeLineSlide";
 import PersonQuotesSlide from "../slide/@PersonQuotes/PersonQuotesSlide";
 import CenteredTitleTextSlide from "../slide/@CenteredTitleText/CenteredTitleTextSlide";
+import RaporAnggotaSlide from "../slide/@RaporAnggota/RaporAnggotaSlide";
 
 type BuilderFunction = { (params: { [key: string]: any }): React.ReactElement };
 export interface Slide {
@@ -96,7 +97,7 @@ registerSlideType("centeredTitleText", (params) => {
 
 /** Special panels */
 registerSlideType("covid19", (params) => {
-  const dateSinceBFH = dateDiff(new Date(2020, 3, 16), new Date())
+  const dateSinceBFH = dateDiff(new Date(2020, 3, 16), new Date());
   const noOfActivities = 17;
   const amountDonated = "Rp13.446.543,-";
   const bodyText = `Kita sudah Berhimpun From Home selama <b>${dateSinceBFH} hari</b> lho! Walaupun begitu, kita sudah melakukan <b>${noOfActivities} kegiatan</b> bersama-sama. Selain itu, kita juga sudah menyumbang <b>${amountDonated}</b> untuk penanggulangan pandemi!`;
@@ -118,3 +119,32 @@ function dateDiff(startDate: Date, endDate: Date) {
     Math.abs((startDate.getTime() - endDate.getTime()) / oneDay)
   );
 }
+
+registerSlideType("raporAnggota", (params) => {
+  const {
+    backgroundImage,
+    backgroundColor,
+    backgroundOpacity,
+    org,
+    role,
+    supervisor,
+    scores,
+    url,
+  } = params;
+
+  return (
+    <RaporAnggotaSlide
+      backgroundImage={
+        backgroundImage ? `url('${backgroundImage}')` : undefined
+      }
+      backgroundColor={backgroundColor}
+      backgroundOpacity={backgroundOpacity}
+      org={org}
+      role={role}
+      supervisor={supervisor}
+      scores={scores}
+      ctaTitle={url ? "Lihat Rapor Anggota" : undefined}
+      ctaLink={url}
+    />
+  );
+});

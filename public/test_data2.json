@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rapor_anggota:1",
+    "type": "raporAnggota",
+    "params": {
+      "backgroundColor": "#008C98",
+      "org": "Arkavidia 6.0",
+      "role": "Wakil Ketua Divisi IT",
+      "supervisor": "Ahmad Fahmi Pratama",
+      "scores": [
+        { "criteria": "Kehadiran", "score": "100%" },
+        { "criteria": "Tanggung Jawab", "score": "75%" },
+        { "criteria": "Komunikasi", "score": "75%" }
+      ],
+      "url": "https://www.google.com",
+      "remarks": "One of the best tech guy I've ever met! Thank you banget karena workflow kerja IT jadi jauh lebih mantep, terus juga introducing shiny2 new tech kaya AR IG dsb, meskipun masih ada yg bisa diperbaiki, but it got a solid 9.9/10 for me. Semoga apa yang udah dikerjain di Arkav 6 bisa diturunin dengan baik ke Arkav 7 yey"
+    }
+  },
+  {
+    "id": "division_heads_remarks:13517007",
+    "type": "personQuotes",
+    "params": {
+      "quote": "Lorem ipsum dolor sit amet! Lorem ipsum ipsum lorem.",
+      "person": "Mohammad Ridwan Hady Arifin,<br />Penanggung Jawab Acara Dies Natalis 2019",
+      "backgroundColor": "#008C98",
+      "backgroundOpacity": 0.15,
+      "backgroundImage": "https://storage.googleapis.com/hmif-insights/portraits/17/13517007.jpg",
+      "ctaTitle": "Lihat Rapor Anggota",
+      "ctaLink": "https://hmif.itb.ac.id"
+    }
+  }
+]
