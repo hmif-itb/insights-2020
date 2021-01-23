@@ -81,7 +81,7 @@ const ClosingSlide: React.FC<MyProps> = ({
         <div>
           <div className={classes.rating_container}>
             {!rating && (
-              <small>Seberapa suka kamu dengan HMIF Insights 2020?</small>
+              <small>Seberapa suka kamu dengan HMIF Insights 2021?</small>
             )}
             {rating && rating > 3 && (
               <small>Kami seneng banget kamu menyukainya!</small>
