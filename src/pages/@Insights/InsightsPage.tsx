@@ -129,7 +129,7 @@ const InsightsPage: React.FC = () => {
   const height = use100vh();
 
   return (
-    <div className="root" style={{ minHeight: height || "100vh" }}>
+    <div className="root" style={{ height: height || "100vh" }}>
       <div className="control">
         <IconButton
           aria-label="back"
