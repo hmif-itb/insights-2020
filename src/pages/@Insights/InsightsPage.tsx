@@ -9,6 +9,7 @@ import ArrowLeftIcon from "@material-ui/icons/ChevronLeft";
 import ArrowRightIcon from "@material-ui/icons/ChevronRight";
 import axios from "axios";
 import { uuid } from "uuidv4";
+import { use100vh } from "react-div-100vh";
 
 import "./style.css";
 import ClosingSlide from "../../slide/@Closing/ClosingSlide";
@@ -125,8 +126,10 @@ const InsightsPage: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
+  const height = use100vh();
+
   return (
-    <div className="root">
+    <div className="root" style={{ height: height || "100vh" }}>
       <div className="control">
         <IconButton
           aria-label="back"

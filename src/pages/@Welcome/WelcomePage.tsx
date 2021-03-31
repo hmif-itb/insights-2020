@@ -1,21 +1,24 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import GoogleLogin from "react-google-login";
+import { use100vh } from "react-div-100vh";
 
 import "./style.css";
 import InsightsLogo from "../../assets/img/InsightsLogo.svg";
 import HMIFLogo from "../../assets/img/hmiflogo.png";
 
 const WelcomePage: React.FC = () => {
-  const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID || '';
+  const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID || "";
   const googleHostedDomain = process.env.REACT_APP_GSUITE_DOMAIN;
 
   const location = window.location;
   const baseUrl = location.protocol + "//" + location.host;
-  const redirectUrl = baseUrl + '/login'
+  const redirectUrl = baseUrl + "/login";
+
+  const height = use100vh();
 
   return (
-    <div className="root">
+    <div className="root" style={{ height: height || "100vh" }}>
       <div className="main">
         <div className="WelcomePage">
           <Box display="flex">
