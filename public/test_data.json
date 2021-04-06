@@ -39,6 +39,65 @@
     }
   },
   {
+    "id": "kunjungan",
+    "type": "threeLine",
+    "params": {
+      "backgroundColor": "#115300",
+      "topSubtitle": "Kunjungan",
+      "mainText": "HMIF sudah melakukan <span class='text-yellow'>8 kunjungan</span> dari universitas lain",
+      "bodyText": "Organisasi kampus lain yang pernah kunjungan dengan HMIF:",
+      "listItems": [
+        "BEM Fasilkom Universitas Indonesia",
+        "Himakom Universitas Gadjah Mada",
+        "HIMTI Universitas Bina Nusantara",
+        "HMIF Universitas Diponegoro",
+        "HMIF Filkom Universitas Brawijaya",
+        "HMTI Politeknik Negeri Malang",
+        "HIMIT Politeknik Elektronika Negeri Surabaya",
+        "HMTC Institut Teknologi Sepuluh Nopember"
+      ],
+      "backgroundImage": "/img/kunjungan.jpg",
+      "backgroundOpacity": 0.15
+    }
+  },
+  {
+    "id": "hmif_goes_out",
+    "type": "threeLine",
+    "params": {
+      "backgroundColor": "#1F005D",
+      "topSubtitle": "HMIF Goes Out",
+      "mainText": "Kita sudah mengunjungi <span class='text-yellow'>4 perusahaan</span> secara online",
+      "bodyText": "Di kepengurusan ini, HMIF sudah mengunjungi 4 perusahaan secara daring dengan <b>400+ peserta</b>.<br /><br />Perusahaan yang kita kunjungi:",
+      "listItems": ["GDP Labs", "Doku", "Accenture Indonesia", "Stockbit"],
+      "backgroundImage": "/img/kunjungan.jpg",
+      "backgroundOpacity": 0.15
+    }
+  },
+  {
+    "id": "phishing_test",
+    "type": "threeLine",
+    "params": {
+      "backgroundColor": "#000000",
+      "topSubtitle": "Phishing Test",
+      "mainText": "<span class='text-yellow'>109 orang</span> kena tipu dong!",
+      "bodyText": "Bulan September 2020 lalu, kami iseng mengirimkan email phishing ke warga Async, Decrypt, UNIX, dan sebagian BIT. <br /><br />Hasilnya? <b>258 orang</b> membuka link phishing dan <b>109 orang</b> mensubmit username dan password! Tapi tenang aja, password dan username kalian gak kami simpen kok :)",
+      "backgroundImage": "/img/hackerman.jpg",
+      "backgroundOpacity": 0.35
+    }
+  },
+  {
+    "id": "gemastik",
+    "type": "threeLine",
+    "params": {
+      "backgroundColor": "#750000",
+      "topSubtitle": "GEMASIK XIII",
+      "mainText": "Kontingen ITB mendapat <span class='text-yellow'>peringkat 3</span> di GEMASTIK 13!",
+      "bodyText": "HMIF bersama dengan Pusat AI ITB dan Ditmawa mengadakan persiapan Pra-Gemastik yang diikuti oleh <b>110 pendaftar</b> dan berhasil mencetak <b>15 finalis</b> dan <b>6 juara</b>!<br /><br />Kontingen ITB pun berhasil meraih peringkat 3, naik dari tahun sebelumnya peringkat 4.",
+      "backgroundImage": "/img/gemastik.jpg",
+      "backgroundOpacity": 0.25
+    }
+  },
+  {
     "id": "unique_moments:18217050",
     "type": "threeLine",
     "params": {
