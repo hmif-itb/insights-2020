@@ -97,8 +97,8 @@ registerSlideType("centeredTitleText", (params) => {
 
 /** Special panels */
 registerSlideType("covid19", (params) => {
-  const dateSinceBFH = dateDiff(new Date(2020, 3, 16), new Date());
-  const noOfActivities = 17;
+  const dateSinceBFH = dateDiff(new Date(2020, 3, 16), new Date(2021, 4, 8));
+  const noOfActivities = 34;
   const amountDonated = "Rp13.446.543,-";
   const bodyText = `Kita sudah Berhimpun From Home selama <b>${dateSinceBFH} hari</b> lho! Walaupun begitu, kita sudah melakukan <b>${noOfActivities} kegiatan</b> bersama-sama. Selain itu, kita juga sudah menyumbang <b>${amountDonated}</b> untuk penanggulangan pandemi!`;
   return (
