@@ -98,6 +98,30 @@
     }
   },
   {
+    "id": "bootcamp",
+    "type": "threeLine",
+    "params": {
+      "backgroundColor": "#000000",
+      "topSubtitle": "HMIF Bootcamp",
+      "mainText": "<span class='text-yellow'>306 orang</span> dari <span class='text-yellow'>41 prodi</span> mendaftar untuk ikut HMIF Bootcamp!",
+      "bodyText": "Tahun ini, walaupun Bootcamp hanya dilakukan satu kali, tetapi antusiasme warga ITB ternyata tinggi. 306 orang tersebut berasal dari <b>41 prodi dan fakultas</b> yang berbeda, bahkan termasuk Mikrobiologi, Teknik Perminyakan, dan Desain Produk. Dari 306 pendaftar, dipilih 78 peserta.",
+      "backgroundImage": "/img/bootcamp.jpg",
+      "backgroundOpacity": 0.25
+    }
+  },
+  {
+    "id": "bootcamp:thanks",
+    "type": "threeLine",
+    "params": {
+      "backgroundColor": "#000000",
+      "backgroundImage": "/img/bootcamp2.jpg",
+      "backgroundOpacity": 0.2,
+      "topSubtitle": "HMIF Bootcamp",
+      "mainText": "Terima kasih udah ikut bootcamp <span class='text-yellow'>UI/UX</span>!",
+      "bodyText": "Terima kasih ya udah jadi peserta bootcamp <b>UI/UX</b>. Semoga ilmu yang kamu dapatkan bisa berguna untuk kedepannya ya! Jangan lupa juga sharing ilmunya ke orang lain biar kita semua bisa jago bareng-bareng :)"
+    }
+  },
+  {
     "id": "arkavidia",
     "type": "threeLine",
     "params": {
@@ -107,6 +131,40 @@
       "bodyText": "Setelah persiapan berbulan-bulan, Arkavidia 7.0 dilakukan di bulan Januari-Februari dengan 1347 peserta lomba, 779 peserta main event, dan 595 peserta preevent.",
       "backgroundImage": "/img/arkavidia.jpg",
       "backgroundOpacity": 0.35
+    }
+  },
+  {
+    "id": "apresiasi_personal",
+    "type": "threeLine",
+    "params": {
+      "bottom": true,
+      "topSubtitle": "Hi, Didit!",
+      "mainText": "Nominal Gopay gak seberapa dibanding <span class='text-yellow'>impact</span> yang kamu berikan pada teman-teman kamu!",
+      "bodyText": "Mewakili segenap orang yang pernah <strike>jadi pacar kamu</strike> kamu tutorin, aku mau bilang terima kasih ya atas jasa kamu!! Berkat kamu, UTS sama UAS jadi kerasa lebih siap... Jangan kapok ya buat ngajarin kita-kita hehehe"
+    }
+  },
+  {
+    "id": "apresiasi_personal",
+    "type": "threeLine",
+    "params": {
+      "bottom": true,
+      "topSubtitle": "Hi, John Doe!",
+      "mainText": "Karena kamu dan timmu, Wisuda Maret sudah jadi acara yang <span class='text-yellow'>keren</span>!",
+      "bodyText": "Berkat kamu, banyak wisudawan yang mendapatkan kesan terbaik pada saat-saat terakhirnya di HMIF. Semoga pengalaman ini bisa bermanfaat buat kamu ke depannya!",
+      "backgroundColor": "#000000",
+      "backgroundImage": "/img/wisuda.jpg",
+      "backgroundOpacity": 0.15
+    }
+  },
+  {
+    "id": "apresiasi_hometour",
+    "type": "threeLine",
+    "params": {
+      "bottom": true,
+      "topSubtitle": "Hometour",
+      "mainText": "Begadang jangan begadang, kalau tiada artinya... Begadang boleh saja... Asal nubes atau nonhim...",
+      "bodyText": "Terima kasih atas partisipasi kamu buat ikut nonhim, terlebih lagi, kamu sukses menangin mini games dan dapetin chatime dari kita. Hehehe, rasa yang gratisan biasanya lebih enak, bukan?",
+      "backgroundColor": "#0E2B87"
     }
   },
   {
