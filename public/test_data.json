@@ -18,12 +18,24 @@
     "id": "iit_projects",
     "type": "threeLine",
     "params": {
-      "topSubtitle": "#CuanProyekanIIT",
-      "mainText": "Kamu sudah menyelesaikan <span class='text-yellow'>3 proyek</span> bersama IIT lho!",
-      "bodyText": "Di kepengurusan ini, kamu sudah menyelesaikan <b>3 proyek</b>, dan dibayar <b>Rp5.630.000</b>! Bisa banget tuh buat traktiran :)",
+      "topSubtitle": "Inkubator IT",
+      "mainText": "Ada <span class='text-yellow'>140+ proyek</span> yang masuk Inkubator IT lho!",
+      "bodyText": "Di kepengurusan ini, IIT menerima 140+ proyek dari himpunan lain, perusahaan, dan bahkan mahasiswa lain. Teknologi yang digunakan juga bermacam-macam, ada dari web development, Unity, AR/VR, dan masih banyak lagi!<br /><br />Proyek dengan budget paling besar yang masuk ke IIT bernilai <b class='text-yellow'>Rp78 juta!</b>",
       "backgroundColor": "#502E00",
       "backgroundOpacity": 0.15,
       "backgroundImage": "/img/money.jpg"
+    }
+  },
+  {
+    "id": "codemy",
+    "type": "threeLine",
+    "params": {
+      "topSubtitle": "Codemy",
+      "mainText": "HMIF berhasil menjual <span class='text-yellow'>1200+ eksemplar</span> Codemy lho!",
+      "bodyText": "Codemy, buku tutorial Pengenalan Komputasional untuk warga TPB, berhasil terjual <b>1200+ eksemplar</b> ke berbagai kalangan di ITB, dan bahkan kampus lain, lho.<br /><br />Penjualan Codemy berhasil mendatangkan tambahan kas HMIF sebesar <b>Rp13 juta</b> :)",
+      "backgroundColor": "#005282",
+      "backgroundOpacity": 0.15,
+      "backgroundImage": "/img/codemy.jpg"
     }
   },
   {
