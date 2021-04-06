@@ -69,7 +69,7 @@
       "mainText": "Kita sudah mengunjungi <span class='text-yellow'>4 perusahaan</span> secara online",
       "bodyText": "Di kepengurusan ini, HMIF sudah mengunjungi 4 perusahaan secara daring dengan <b>400+ peserta</b>.<br /><br />Perusahaan yang kita kunjungi:",
       "listItems": ["GDP Labs", "Doku", "Accenture Indonesia", "Stockbit"],
-      "backgroundImage": "/img/kunjungan.jpg",
+      "backgroundImage": "/img/goesout.jpg",
       "backgroundOpacity": 0.15
     }
   },
