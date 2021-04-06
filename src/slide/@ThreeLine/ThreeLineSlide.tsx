@@ -32,13 +32,18 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     height: "100%",
+    overflow: "auto",
   },
   content: {
-    marginTop: "36px",
+    paddingTop: "60px",
     padding: "24px",
+    height: "100%",
     zIndex: 1,
     flex: 1,
     justifyContent: "start",
+    overflow: "auto",
+    display: "flex",
+    flexDirection: "column",
   },
   top_subtitle: { fontWeight: 600 },
   main_text: { fontWeight: 900 },
@@ -52,8 +57,8 @@ const ThreeLineSlide: React.FC<MyProps> = (props) => {
   return (
     <div className={classes.Slide}>
       <div className={classes.background}></div>
-      {!!props.bottom && <div style={{ flex: 1 }}></div>}
       <div className={classes.content}>
+        {!!props.bottom && <div style={{ flex: 1 }}></div>}
         <h3
           className="top-subtitle"
           dangerouslySetInnerHTML={{ __html: props.topSubtitle }}
@@ -69,7 +74,9 @@ const ThreeLineSlide: React.FC<MyProps> = (props) => {
         {props.listItems && (
           <div className={classes.list_items}>
             {props.listItems.map((item, i) => (
-              <div className={classes.list_item} key={i}>{item}</div>
+              <div className={classes.list_item} key={i}>
+                {item}
+              </div>
             ))}
           </div>
         )}

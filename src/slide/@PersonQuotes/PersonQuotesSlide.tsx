@@ -36,11 +36,15 @@ const useStyles = makeStyles({
     overflow: "auto",
   },
   content: {
-    marginTop: "48px",
+    paddingTop: "72px",
     padding: "24px",
+    height: "100%",
     zIndex: 1,
     flex: 1,
     justifyContent: "start",
+    overflow: "auto",
+    display: "flex",
+    flexDirection: "column",
   },
   main_text: {
     margin: "0",

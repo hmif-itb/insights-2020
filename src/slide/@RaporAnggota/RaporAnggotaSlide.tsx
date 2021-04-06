@@ -37,13 +37,17 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     height: "100%",
+    overflow: "auto",
   },
   content: {
-    marginTop: "36px",
+    paddingTop: "60px",
     padding: "24px",
     zIndex: 1,
     flex: 1,
     justifyContent: "start",
+    overflow: "auto",
+    display: "flex",
+    flexDirection: "column",
   },
   slideTitle: {
     marginTop: theme.spacing(1),
@@ -56,7 +60,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "4px",
     fontWeight: 600,
   },
+  gridItem: {
+    display: "flex",
+  },
   card: {
+    flex: 1,
     padding: theme.spacing(2),
     background: "#ffffff33",
     textAlign: "center",
@@ -89,7 +97,7 @@ const RaporAnggotaSlide: React.FC<MyProps> = (props) => {
         <Box mt={5}>
           <Grid container spacing={1}>
             {props.scores.map((item, i) => (
-              <Grid item xs={6} key={i}>
+              <Grid item xs={6} key={i} className={classes.gridItem}>
                 <Card elevation={0} className={classes.card}>
                   <div>{item.criteria}</div>
                   <Box mt={1} className={classes.score}>
