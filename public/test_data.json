@@ -90,11 +90,23 @@
     "type": "threeLine",
     "params": {
       "backgroundColor": "#750000",
-      "topSubtitle": "GEMASIK XIII",
+      "topSubtitle": "GEMASTIK XIII",
       "mainText": "Kontingen ITB mendapat <span class='text-yellow'>peringkat 3</span> di GEMASTIK 13!",
       "bodyText": "HMIF bersama dengan Pusat AI ITB dan Ditmawa mengadakan persiapan Pra-Gemastik yang diikuti oleh <b>110 pendaftar</b> dan berhasil mencetak <b>15 finalis</b> dan <b>6 juara</b>!<br /><br />Kontingen ITB pun berhasil meraih peringkat 3, naik dari tahun sebelumnya peringkat 4.",
       "backgroundImage": "/img/gemastik.jpg",
       "backgroundOpacity": 0.25
+    }
+  },
+  {
+    "id": "arkavidia",
+    "type": "threeLine",
+    "params": {
+      "backgroundColor": "#FF2525",
+      "topSubtitle": "Arkavidia 7.0",
+      "mainText": "Arkavidia 7.0 diikuti oleh <span class='text-yellow'>&gt;2700 peserta</span>!",
+      "bodyText": "Setelah persiapan berbulan-bulan, Arkavidia 7.0 dilakukan di bulan Januari-Februari dengan 1347 peserta lomba, 779 peserta main event, dan 595 peserta preevent.",
+      "backgroundImage": "/img/arkavidia.jpg",
+      "backgroundOpacity": 0.35
     }
   },
   {
